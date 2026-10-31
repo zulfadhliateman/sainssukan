@@ -1,33 +1,145 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ms">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.4">
-  <style type="text/css">
-    body {background-color: #eef2f7}
-    p.p3 {margin: 0.0px 5.0px 5.0px 5.0px; text-align: center; text-indent: -5.0px; font: 16.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p4 {margin: 0.0px 5.0px 5.0px 5.0px; text-align: center; text-indent: -5.0px; font: 12.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #121a27; -webkit-text-stroke: #121a27; background-color: #ffffff}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #121a27; -webkit-text-stroke: #121a27; background-color: #b7141f; min-height: 18.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Arial; color: #121a27; -webkit-text-stroke: #121a27; background-color: #ffffff}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #121a27; -webkit-text-stroke: #121a27; min-height: 18.0px}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Arial; color: #4e5c73; -webkit-text-stroke: #4e5c73}
-    span.s1 {font-kerning: none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuiz Interaktif Unit 5.3 - Sains Sukan Tingkatan 5</title>
+<style>
+:root{--navy:#12345a;--blue:#1769aa;--red:#c62828;--pale:#eef5fc;--ink:#182433;--green:#187a43}
+*{box-sizing:border-box}
+body{margin:0;background:#edf2f7;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+header{background:linear-gradient(120deg,var(--navy),var(--blue));color:white;padding:26px 16px;text-align:center;border-bottom:7px solid var(--red)}
+header h1{margin:0 0 8px;font-size:clamp(22px,4vw,32px)}
+header h2{margin:0;font-size:clamp(17px,3vw,23px)}
+header p{margin:10px 0 0}
+.wrap{max-width:900px;margin:22px auto;padding:0 14px}
+.panel,.question{background:white;border-radius:12px;padding:18px;margin:15px 0;box-shadow:0 3px 12px #14263b14}
+.panel{border-top:5px solid var(--red)}
+.question h3{margin:0 0 12px;color:var(--navy);font-size:18px}
+.options{display:grid;gap:9px}
+.option{display:block;padding:11px 13px;border:1px solid #cbd5e1;border-radius:8px;cursor:pointer;background:#fff}
+.option:hover{background:var(--pale);border-color:var(--blue)}
+.option input{margin-right:9px}
+.option.correct{border-color:var(--green);background:#e9f7ef}
+.option.wrong{border-color:var(--red);background:#fff0f0}
+.feedback{display:none;margin-top:12px;padding:11px;border-radius:8px;background:#f1f5f9}
+.feedback.show{display:block}
+.feedback.good{border-left:5px solid var(--green)}
+.feedback.bad{border-left:5px solid var(--red)}
+button{border:0;border-radius:8px;padding:12px 18px;font-size:16px;font-weight:bold;cursor:pointer}
+.primary{background:var(--blue);color:white}
+.secondary{background:var(--red);color:white}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+#result{display:none}
+.score{font-size:26px;font-weight:bold;color:var(--navy)}
+#answerKey{display:none;margin-top:15px}
+.keygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.keyitem{background:var(--pale);padding:8px;border-radius:6px}
+footer{text-align:center;color:#526174;padding:20px;font-size:14px}
+.small{font-size:14px;color:#526174}
+@media(max-width:600px){.panel,.question{padding:14px}.actions button{width:100%}}
+</style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 26.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 31.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 26.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s1"><b>Kuiz Interaktif Sains Sukan Tingkatan 5</b></span></h1>
-<p class="p3"><span class="s1"><b>Bidang 5 · Unit 5.3</b></span></p>
-<p class="p3"><span class="s1">Bendalir Tubuh, Elektrolit dan Termokawalaturan</span></p>
-<p class="p4"><span class="s1">Disediakan oleh : Cikgu Zulfadhli bin Ateman</span></p>
-<p class="p5"><span class="s1"><b>Arahan:</b> Jawab 15 soalan objektif. Pilih A, B, C atau D. Maklum balas dan penerangan dipaparkan selepas setiap jawapan.</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p7"><span class="s1">Soalan 1 daripada 15</span></p>
-<p class="p8"><span class="s1"></span><br></p>
-<p class="p9"><span class="s1">Latihan pengukuhan · Sains Sukan Tingkatan 5</span></p>
+<header>
+<h1>Kuiz Interaktif Sains Sukan Tingkatan 5</h1>
+<h2>UNIT 5.3 – BENDALIR TUBUH, ELEKTROLIT DAN PENTERMOKAWALATURAN</h2>
+<p>25 Soalan Objektif • Aras SPM</p>
+</header>
+<main class="wrap">
+<section class="panel">
+<strong>Arahan:</strong> Jawab semua soalan. Pilih satu jawapan yang paling tepat bagi setiap soalan. Maklum balas akan dipaparkan selepas pilihan dibuat.
+<p class="small">Setiap soalan membawa 1 markah. Jumlah: 25 markah.</p>
+<div id="progress">Soalan dijawab: 0 / 25</div>
+</section>
+<div id="quiz"></div>
+<section class="panel" id="result">
+<h2>Keputusan Kuiz</h2>
+<div class="score" id="score"></div>
+<p id="grade"></p>
+<div class="actions">
+<button class="primary" id="showKey">Papar skema jawapan</button>
+<button class="secondary" id="restart">Cuba semula</button>
+</div>
+<div id="answerKey"><h3>Skema Jawapan</h3><div class="keygrid" id="keyGrid"></div></div>
+</section>
+</main>
+<footer>Disediakan oleh : Cikgu Zulfadhli bin Ateman</footer>
+<script>
+const questions = [
+{q:"Apakah fungsi utama air dalam tubuh manusia?",o:["Membekalkan tenaga utama kepada otot","Menjadi medium bagi proses tubuh dan membantu mengawal atur suhu","Menggantikan fungsi semua vitamin","Meningkatkan ketumpatan tulang secara langsung"],a:1,e:"Air ialah komponen utama tubuh, menjadi medium bagi pelbagai proses dan membantu pengawalan suhu badan."},
+{q:"Pernyataan manakah BENAR tentang air sebagai nutrien?",o:["Air membekalkan 9 kcal bagi setiap gram","Air membekalkan 4 kcal bagi setiap gram","Air tidak mempunyai nilai tenaga tetapi penting untuk kehidupan","Air hanya diperlukan selepas pertandingan"],a:2,e:"Air tidak membekalkan tenaga, tetapi penting untuk fungsi tubuh dan prestasi."},
+{q:"Kehilangan air yang berlebihan daripada tubuh sehingga menjejaskan fungsi normal dikenali sebagai",o:["Hipertermia","Dehidrasi","Hipertrofi","Hipoglisemia"],a:1,e:"Dehidrasi berlaku apabila kehilangan air melebihi pengambilan atau penggantian cecair."},
+{q:"Apakah kesan dehidrasi terhadap atlet?",o:["Prestasi sukan boleh merosot","Simpanan glikogen meningkat secara automatik","Suhu badan sentiasa menurun","Keperluan elektrolit menjadi sifar"],a:0,e:"Kehilangan air boleh memudaratkan kesihatan dan menjejaskan prestasi sukan."},
+{q:"Mengapakah atlet perlu mengambil air dan elektrolit yang mencukupi semasa latihan?",o:["Membina enzim dan antibodi sahaja","Mengawal suhu tubuh dan mengekalkan imbangan cecair","Menggantikan semua sumber tenaga","Menghentikan penghasilan peluh"],a:1,e:"Air dan elektrolit membantu mengawal suhu tubuh serta mengekalkan imbangan cecair."},
+{q:"Antara berikut, yang manakah boleh menyebabkan kandungan air tubuh terganggu semasa senaman?",o:["Gabungan haba persekitaran dan haba daripada metabolisme senaman","Pengurangan cahaya di dalam dewan","Peningkatan fleksibiliti sendi","Pengurangan tekanan udara sahaja"],a:0,e:"Haba persekitaran bersama haba yang terhasil semasa metabolisme senaman boleh mengganggu kandungan air tubuh."},
+{q:"Cecair yang berada di dalam salur darah dikenali sebagai bendalir",o:["Intrasel","Interstisial","Intravaskular","Intrasendi"],a:2,e:"Bendalir intravaskular ialah cecair yang terdapat di dalam salur darah."},
+{q:"Cecair yang terdapat di dalam sel dikenali sebagai bendalir",o:["Intrasel","Interstisial","Intravaskular","Ekstravaskular"],a:0,e:"Bendalir intrasel ialah cecair yang berada di dalam sel."},
+{q:"Bendalir interstisial merujuk kepada cecair yang terdapat",o:["Di dalam nukleus sahaja","Di ruang antara sel","Di dalam salur darah sahaja","Di dalam rongga sendi sahaja"],a:1,e:"Bendalir interstisial berada di ruang antara sel."},
+{q:"Apakah maksud elektrolit?",o:["Mineral yang membentuk tulang sahaja","Bahan yang terurai menjadi ion bercas apabila berada dalam larutan","Bahan yang membekalkan tenaga segera","Sejenis hormon untuk membina otot"],a:1,e:"Elektrolit ialah mineral yang membentuk ion bercas dalam larutan dan penting dalam fungsi tubuh."},
+{q:"Antara berikut, yang manakah merupakan contoh elektrolit dalam tubuh?",o:["Natrium","Glukosa","Kanji","Kolesterol"],a:0,e:"Natrium ialah elektrolit. Elektrolit lain termasuk kalium dan klorida."},
+{q:"Kehilangan elektrolit semasa aktiviti fizikal lazimnya berlaku melalui",o:["Pernafasan sahaja","Peluh","Pertumbuhan rambut","Penghasilan air liur sahaja"],a:1,e:"Elektrolit boleh hilang bersama peluh semasa aktiviti fizikal."},
+{q:"Apakah kepentingan mengekalkan imbangan cecair dan elektrolit?",o:["Menyokong fungsi tubuh dan pengawalan suhu","Menghapuskan keperluan rehat","Mengelakkan semua kecederaan sukan","Menghentikan aktiviti otot"],a:0,e:"Imbangan cecair dan elektrolit menyokong fungsi tubuh, termasuk kawalan suhu."},
+{q:"Proses pemindahan haba secara langsung apabila tubuh bersentuhan dengan objek dinamakan",o:["Radiasi","Perolakan","Konduksi","Penyejatan"],a:2,e:"Konduksi ialah pemindahan haba melalui sentuhan langsung."},
+{q:"Pemindahan haba melalui pergerakan udara atau air dinamakan",o:["Konduksi","Perolakan","Radiasi","Penyejatan"],a:1,e:"Perolakan memindahkan haba melalui pergerakan bendalir seperti udara atau air."},
+{q:"Apakah yang dimaksudkan dengan penyejatan dalam proses kehilangan haba?",o:["Haba berpindah melalui sentuhan objek","Tenaga haba keluar melalui pancaran","Peluh bertukar menjadi wap pada permukaan kulit","Haba dipindahkan oleh aliran darah sahaja"],a:2,e:"Penyejatan berlaku apabila peluh menyejat dari permukaan kulit dan membantu menyingkirkan haba."},
+{q:"Radiasi ialah proses",o:["Pemindahan haba secara langsung melalui sentuhan","Haba dipindahkan melalui pergerakan udara","Tenaga haba keluar daripada tubuh ke persekitaran dalam bentuk pancaran","Peluh menyejat daripada kulit"],a:2,e:"Radiasi ialah pemindahan tenaga haba daripada tubuh ke persekitaran melalui pancaran."},
+{q:"Antara berikut, yang manakah merupakan cara haba dinyahkan daripada tubuh manusia?",o:["Konduksi, penyejatan, radiasi dan perolakan","Respirasi, pencernaan, penyerapan dan perkumuhan","Fotosintesis, radiasi, konduksi dan osmosis","Difusi, mitosis, penyejatan dan respirasi"],a:0,e:"Empat cara utama yang dinyatakan dalam bahan ialah konduksi, penyejatan, radiasi dan perolakan."},
+{q:"Seorang pelari berlari dalam cuaca panas dan berpeluh dengan banyak. Mekanisme utama kehilangan haba melalui peluh ialah",o:["Konduksi","Penyejatan","Radiasi","Pembekuan"],a:1,e:"Peluh yang menyejat dari permukaan kulit membantu menyingkirkan haba."},
+{q:"Apakah tujuan pentermokawalaturan?",o:["Mengekalkan suhu tubuh dalam julat yang sesuai","Meningkatkan suhu tubuh tanpa had","Menghentikan penghasilan peluh","Mengurangkan kandungan air dalam sel"],a:0,e:"Pentermokawalaturan ialah proses mengawal suhu tubuh supaya fungsi badan dapat berjalan dengan baik."},
+{q:"Mengapakah pengambilan minuman selepas latihan perlu diberi perhatian?",o:["Untuk meningkatkan suhu otot","Untuk mengawal imbangan cecair dan elektrolit dalam badan","Untuk menghalang semua proses metabolisme","Untuk menggantikan protein sahaja"],a:1,e:"Pengambilan minuman membantu menggantikan kehilangan cecair dan mengekalkan imbangan elektrolit."},
+{q:"Pilih pernyataan yang BETUL tentang air dalam tubuh.\nI. Air ialah komponen utama komposisi badan.\nII. Kehilangan air melalui dehidrasi boleh menjejaskan prestasi.\nIII. Air membekalkan tenaga sebanyak 4 kcal/g.\nIV. Haba persekitaran dan senaman boleh mempengaruhi kandungan air tubuh.",o:["I dan II sahaja","I, II dan IV sahaja","II, III dan IV sahaja","I, II, III dan IV"],a:1,e:"I, II dan IV betul. Air tidak membekalkan 4 kcal bagi setiap gram."},
+{q:"Haba dinyahkan daripada tubuh manusia melalui proses berikut.\nI. Konduksi\nII. Penyejatan\nIII. Perolakan\nIV. Radiasi",o:["I dan II sahaja","II dan III sahaja","I, II dan III sahaja","I, II, III dan IV"],a:3,e:"Keempat-empat proses ialah cara penyingkiran haba daripada tubuh."},
+{q:"Seorang atlet kehilangan banyak peluh semasa latihan. Apakah tindakan paling sesuai untuk membantu mengekalkan imbangan tubuh?",o:["Mengelakkan minuman sehingga latihan tamat","Menggantikan cecair dan elektrolit yang hilang mengikut keperluan","Mengambil makanan berlemak sahaja","Menghentikan pengambilan air sepanjang hari"],a:1,e:"Cecair dan elektrolit yang hilang perlu diganti bagi membantu mengekalkan imbangan tubuh."},
+{q:"Maklumat berikut menerangkan satu mekanisme kehilangan haba:\n• Haba dipindahkan melalui pergerakan udara atau air.\nApakah mekanisme tersebut?",o:["Konduksi","Radiasi","Perolakan","Penyejatan"],a:2,e:"Perolakan ialah pemindahan haba melalui pergerakan udara atau air."},
+{q:"Apakah kesimpulan paling tepat tentang pengurusan bendalir tubuh bagi atlet?",o:["Air hanya diperlukan ketika berasa dahaga","Pengambilan air dan elektrolit membantu mengawal suhu serta mengekalkan imbangan cecair","Elektrolit tidak hilang semasa berpeluh","Dehidrasi meningkatkan prestasi daya tahan"],a:1,e:"Pengambilan air dan elektrolit yang mencukupi penting untuk imbangan cecair dan pengawalan suhu."}
+];
+const letters=["A","B","C","D"];
+const chosen={};
+const quiz=document.getElementById("quiz");
+function render(){
+ quiz.innerHTML="";
+ questions.forEach((item,i)=>{
+  const card=document.createElement("section");card.className="question";
+  const h=document.createElement("h3");h.textContent=(i+1)+". "+item.q;card.appendChild(h);
+  const opts=document.createElement("div");opts.className="options";
+  item.o.forEach((opt,j)=>{
+   const lab=document.createElement("label");lab.className="option";
+   const radio=document.createElement("input");radio.type="radio";radio.name="q"+i;radio.value=j;
+   if(chosen[i]===j)radio.checked=true;
+   radio.addEventListener("change",()=>selectAnswer(i,j,card));
+   lab.appendChild(radio);lab.append(document.createTextNode(letters[j]+". "+opt));opts.appendChild(lab);
+  });
+  card.appendChild(opts);
+  const fb=document.createElement("div");fb.className="feedback";fb.id="fb"+i;card.appendChild(fb);
+  quiz.appendChild(card);
+  if(chosen[i]!==undefined)showFeedback(i,chosen[i],card);
+ });
+ updateProgress();
+}
+function showFeedback(i,j,card){
+ const item=questions[i],fb=card.querySelector(".feedback");
+ const labels=card.querySelectorAll(".option");
+ labels.forEach((el,k)=>{el.classList.remove("correct","wrong");if(k===item.a)el.classList.add("correct");if(k===j&&j!==item.a)el.classList.add("wrong");});
+ fb.className="feedback show "+(j===item.a?"good":"bad");
+ fb.innerHTML="<strong>"+(j===item.a?"Betul!":"Belum tepat.")+"</strong> Jawapan: "+letters[item.a]+".<br>"+item.e;
+}
+function selectAnswer(i,j,card){if(chosen[i]!==undefined)return;chosen[i]=j;showFeedback(i,j,card);updateProgress();if(Object.keys(chosen).length===questions.length)finish();}
+function updateProgress(){document.getElementById("progress").textContent="Soalan dijawab: "+Object.keys(chosen).length+" / "+questions.length;}
+function finish(){
+ let score=0;questions.forEach((q,i)=>{if(chosen[i]===q.a)score++;});
+ const pct=Math.round(score/questions.length*100);
+ document.getElementById("score").textContent=score+" / 25 markah ("+pct+"%)";
+ document.getElementById("grade").textContent=pct>=80?"Tahap: Cemerlang":pct>=50?"Tahap: Sederhana":"Tahap: Perlu Usaha Lagi";
+ document.getElementById("result").style.display="block";
+ document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+document.getElementById("showKey").addEventListener("click",()=>{
+ const key=document.getElementById("answerKey");key.style.display=key.style.display==="block"?"none":"block";
+ document.getElementById("keyGrid").innerHTML=questions.map((q,i)=>'<div class="keyitem"><strong>'+(i+1)+'. '+letters[q.a]+'</strong></div>').join("");
+});
+document.getElementById("restart").addEventListener("click",()=>{for(const k in chosen)delete chosen[k];document.getElementById("result").style.display="none";document.getElementById("answerKey").style.display="none";render();window.scrollTo({top:0,behavior:"smooth"});});
+render();
+</script>
 </body>
 </html>
